@@ -1,0 +1,11 @@
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes bounce {
+    100% {
+        transform: translateY(25px);
+    }
+}
