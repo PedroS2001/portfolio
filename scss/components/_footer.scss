@@ -1,0 +1,30 @@
+footer {
+    background-color: $color-principal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .divisor{
+      text-decoration: none;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      color: $blanco;
+      span{
+        color: $color-principal;
+        font-weight: 500;
+      }
+      i{
+        padding: 15px;
+        font-size: 3em;
+      }
+      &:hover{
+        background-color: $blanco;
+        color: $color-oscuro;
+        border-radius: 5px;
+      }
+  
+  
+    }
+  }

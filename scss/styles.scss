@@ -5,6 +5,11 @@
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;      */
 
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap');
+
+$blanco-vintage: #FCFFE7;
+$blanco-rosado: #F8ECD1;
+
 @import "./base/variables";
 @import "./base/mediaqueries";
 @import "./base/keyframes";
@@ -14,6 +19,8 @@
 
 @import "./components/acerca";
 @import "./components/proyectos";
+@import "./components/contacto";
+@import "./components/footer";
 
 
 * {
@@ -22,8 +29,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-*::selection{
-  // background: $neon;
+*::selection {
   color: $color-oscuro;
   background: rgba($color: $neon, $alpha: 0.9);
 }
@@ -35,5 +41,30 @@ body {
   font-family: Helvetica, sans-serif;
   color: $color-oscuro;
   background-color: $blanco-crem;
-  background-color: $blanco;
+  // background-color: $blanco-rosado;
+  background-color: $blanco-vintage;
+  // background-color: $blanco;
+}
+
+
+#tecnologias {
+    padding-top: (56px+15px);
+    h1{
+        font-family: 'Poppins', sans-serif;
+    }
+  .row {
+    .col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center
+    }
+  }
+}
+
+.onView{
+  background-color: $neon;
+  a{
+    color: $color-oscuro;
+  }
 }

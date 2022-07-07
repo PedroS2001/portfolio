@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro Señeriz</title>
 
-    <!-- Bootstraps -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -16,172 +16,302 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-
-
-
+    <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/dddcaef727.js" crossorigin="anonymous"></script>
 
-
-
+    <!-- Mis estilos/js/favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/index.js"></script>
 </head>
 
 <body>
     <header>
-        <nav class="topnav" id="myTopnav">
-            <div>
-                <a href="#home" class="active">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
+        <nav class="navbar" id="myTopnav">
+            <a href="#" class="logo">PS</a>
+            <input type="checkbox" id="toggler">
+            <label for="toggler" class="burguer">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="#acerca">Acerca</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
             </div>
-            <button class="burguer icon">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
         </nav>
 
         <div class="banner">
             <div class="capa"></div>
-
             <div class="encabezado">
                 <p>Hola! soy</p>
                 <h1>Pedro Seneriz </h1>
                 <h2 id="text"></h2>
             </div>
             <div class="videoContainer">
-                <video src="./assets/videoBanner.mp4" autoplay muted loop ></video>
+                <video src="./assets/videoBanner.mp4" autoplay muted loop></video>
             </div>
             <div class="arrow">
                 <i class="fas fa-arrow-down"></i>
             </div>
-
         </div>
         <!--Cierre Banner -->
     </header>
 
     <main>
 
+        <!-- ACERCA DE MI -->
         <section class="container" id="acerca" style="min-height: 80vh;">
             <div class="row">
-                <div class="row">
-                    <div class="col">
-                        <h1 style="text-align: center; padding: 1em;">Acerca de mi </h1>
-                    </div>
+                <div class="col">
+                    <h1 style="text-align: center; padding: 1em;">Acerca de mi </h1>
                 </div>
-
-                <div class="row">
-                    <div class="col">
-                        <img src="./assets/img/portfolio-1.jpg" width="100%" alt="Pedro Seneriz">
-                    </div>
-                    <div class="col">
-                        <p>Estoy cursando el ultimo año de la Tecnicatura universitaria en sistemas informaticos en la
-                            UTN-FRA</p>
-                        <p>Me gusta aprender cosas nuevas y aprender haciendo</p>
-                        <p>Tomador Numero#1 de mate</p>
-                        <p>Hincha apasionado de Boca </p>
-                        <p>Disfruto escuchar rock nacional y tomar cafe</p>
-                    </div>
-                </div>
-
             </div>
-        </section>
 
-        <section class="container" id="proyectos" style="min-height: 80vh; background-color: aliceblue;">
             <div class="row">
-                <div class="row">
-                    <div class="col">
-                        <h1 style="text-align: center; padding: 1em;"> Proyectos </h1>
-                    </div>
+                <div class="col">
+                    <img src="./assets/img/portfolio-1.jpg" width="100%" height="100%" alt="Pedro Seneriz">
                 </div>
-
-                <div class="row">
-
-                    <div class="blog-card">
-                        <div class="meta">
-                            <div class="photo"
-                                style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)">
-                            </div>
-                        </div>
-                        <div class="description">
-                            <h1>Clinica online</h1>
-                            <h2>App que simula una clinica online</h2>
-                            <span id="span"></span>
-                            <p>
-                                Hay usuarios especialistas, pacientes y administradores. El paciente puede sacar turnos
-                                con el especialista que quiera. El especialista puede elegir sus horarios y atender a
-                                los pacientes.
-                                El administrador puede sacarle turno a los pacientes y dar de alta/baja a los
-                                especialistas
-                            </p>
-                            <div class="botones">
-                                <a href="#">Muestra</a>
-                                <a href="">Github</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Cierre card 1-->
-
-                    <div class="blog-card">
-                        <div class="meta">
-                            <div class="photo"
-                                style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)">
-                            </div>
-                        </div>
-                        <div class="description">
-                            <h1>Sala de juegos</h1>
-                            <h2>App que contiene varios juegos</h2>
-                            <span id="span"></span>
-                            <p>
-                                Aplicacion web a la que se tiene que iniciar sesion. Tenes un menu con los juegos de: el
-                                ahorcado, mayor o menor, preguntados o buscaminas. Y tambien tenes una sala de chat en timepo real
-                            </p>
-                            <div class="botones">
-                                <a href="#">Muestra</a>
-                                <a href="">Github</a>
-                            </div>
-                        </div>
-                    </div><!--Cierre card 2-->
-
-                    <div class="blog-card">
-                        <div class="meta">
-                            <div class="photo"
-                                style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)">
-                            </div>
-                        </div>
-                        <div class="description">
-                            <h1>Sala de juegos</h1>
-                            <h2>App que contiene varios juegos</h2>
-                            <span id="span"></span>
-                            <p>
-                                Aplicacion web a la que se tiene que iniciar sesion. Tenes un menu con los juegos de: el
-                                ahorcado, mayor o menor, preguntados o buscaminas. Y tambien tenes una sala de chat en timepo real
-                            </p>
-                            <div class="botones">
-                                <a href="#">Muestra</a>
-                                <a href="">Github</a>
-                            </div>
-                        </div>
-                    </div><!--Cierre card 3-->
-
-                </div>  <!--Cierre row-->
+                <div class="col">
+                    <p>Estoy cursando el ultimo año de la Tecnicatura universitaria en sistemas informaticos en la
+                        UTN-FRA</p>
+                    <p>Me gusta aprender cosas nuevas y aprender haciendo</p>
+                    <p>Tomador Numero#1 de mate</p>
+                    <p>Hincha apasionado de Boca </p>
+                    <p>Disfruto escuchar rock nacional y tomar cafe</p>
+                </div>
             </div>
 
-            </div>
         </section>
 
+        <!-- TECNOLOGIAS -->
+        <section class="container" id="tecnologias">
+            <div class="row">
+                <div class="col">
+                    <h1 style="text-align: center; padding: 1em;">Tecnologias </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="./assets/iconos/008-html-5.png" alt="">
+                    <span>HTML</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/007-css-3.png" alt="">
+                    <span>CSS</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/006-js.png" alt="">
+                    <span>JavaScript</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/004-typescript.png" alt="">
+                    <span>TypeScript</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/angular.png" width="64px" alt="">
+                    <span>Angular</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/010-bootstrap.png" alt="">
+                    <span>Bootstrap</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/002-sass.png" alt="">
+                    <span>SASS</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <img src="./assets/iconos/009-letter-c.png" alt="">
+                    <span>C</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/003-c-sharp.png" alt="">
+                    <span>C#</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/005-php.png" alt="">
+                    <span>PHP</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/001-java.png" alt="">
+                    <span>Java</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/node.png" width="64px" alt="">
+                    <span>Node js</span>
+                </div>
+                <div class="col">
+                    <img src="./assets/iconos/springboot.png" width="64px" alt="">
+                    <span>Spring Boot</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PROYECTOS -->
+        <section class="container-fluid" id="proyectos" style="min-height: 80vh; background-color: aliceblue;">
+            <div class="row">
+                <div class="col">
+                    <h1 style="text-align: center; padding: 1em;"> Proyectos </h1>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="blog-card">
+                    <div class="meta">
+                        <div class="photo" style="background-image: url(/assets/img/Home\ -\ clinicaonline.png)">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1>Clinica online</h1>
+                        <h2>Trabajo final Laboratorio IV</h2>
+                        <span id="span"></span>
+                        <p>
+                            App que simula una clinica online, en la que hay pacientes y especialistas.
+                            Se pueden sacar turnos en tiempo real, cancelarlos, ver los turnos que sacaste, imprimirlos.
+                            El especialista incluso puede seleccionar los dias y horarios en los que presta atencion
+                        </p>
+                        <div class="botones">
+                            <span>Angular</span>
+                            <span>Firebase</span>
+                            <span>Bootstrap</span>
+                            <a href="https://senerizclinicaonline.herokuapp.com/" target="_blank">Visitar</a>
+                            <a href="https://github.com/PedroS2001/Clinica-online" target="_blank">Github</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Cierre card 1-->
+
+                <div class="blog-card">
+                    <div class="meta">
+                        <div class="photo" style="background-image: url(./assets/img/Ahorcado\ -\ Saladejuegos.png)">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1>Sala de juegos</h1>
+                        <h2>Trabajo Practico Laboratorio IV</h2>
+                        <span id="span"></span>
+                        <p>
+                            Sala de juegos desarrollada en angular. Cuenta con inicio de sesion para poder tener acceso
+                            a los juegos. Los juegos que contiene son:El ahorcado, el mayor o menor, el preguntados y el
+                            buscaminas. Tambien posee una sala de chat en tiempo real
+                        </p>
+                        <div class="botones">
+                            <span>Angular</span>
+                            <span>Firebase</span>
+                            <span>Bootstrap</span>
+                            <a href="https://senerizsaladejuegos.herokuapp.com" target="_blank">Visitar</a>
+                            <a href="https://github.com/PedroS2001/Saladejuegos" target="_blank">Github</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Cierre card 2-->
+
+                <div class="blog-card">
+                    <div class="meta">
+                        <div class="photo" style="background-image: url(/assets/img/Home\ -\ Ida\ y\ Vuelta.png)">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1>Ida y Vuelta agencia de viajes</h1>
+                        <h2>Proyecto final curso desarrollo web</h2>
+                        <span id="span"></span>
+                        <p>
+                            Pagina hecha para una empresa ficticia, desarrollada en el curso de Desarrollo web en
+                            Coderhouse
+                        </p>
+                        <div class="botones">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>SASS</span>
+                            <span>Bootstrap</span>
+                            <a href="https://pedros2001.github.io/AgenciaDeViajesSeneriz" target="_blank">Visitar</a>
+                            <a href="https://github.com/PedroS2001/AgenciaDeViajesSeneriz" target="_blank">Github</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Cierre card 3-->
+
+            </div>
+            <!--Cierre row cards-->
+
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="container" id="contacto" style="min-height: 80vh;">
+            <div class="row">
+                <div class="col">
+                    <h1 style="text-align: center; padding: 1em;"> Contactame </h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="form-group mb-3">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingNombre" placeholder="Nombre">
+                            <label for="floatingNombre" class="form-text">Nombre y apellido</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingEmail" placeholder="Correo">
+                            <label for="floatingEmail" class="form-text">Correo electronico</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingAsunto" placeholder="Asunto">
+                            <label for="floatingAsunto" class="form-text">Asunto</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="mensaje" id="floatingTextarea"
+                                style="height: 150px; resize: none;"></textarea>
+                            <label for="floatingTextarea" class="form-text">Mensaje</label>
+                        </div>
+
+                        <button>
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.1em"
+                                    height="1.1em">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span>Enviar</span>
+                        </button>
+
+                    </div>
+                    <!--Cierre formGroup-->
 
 
-        <section id="contacto" style="height: 50vh;">
-            asd
+                </div>
+                <div class="col-12 col-md-6" id="imgMail">
+                    <img id="avioncito" src="./assets/avionrafiki.svg" alt="">
+                    <img id="rafiki" src="./assets/rafiki.svg" alt="">
+                </div>
+            </div>
+
         </section>
 
     </main>
 
-    <footer>
+    <footer style="min-height: 150px;">
+        <a class="divisor" href="https://www.linkedin.com/in/pedro-seneriz/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+        </a>
 
+        <a class="divisor" href="https://www.github.com/PedroS2001" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+        </a>
     </footer>
 
 </body>
