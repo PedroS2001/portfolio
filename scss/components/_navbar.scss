@@ -1,6 +1,3 @@
-/* Add a black background color to the top navigation */
-
-
 .navbar {
   background-color: $color-principal;
   display: flex;
@@ -20,11 +17,11 @@
   }
 
   .logo {
-    margin-right: 50px;
+    // margin-right: 50px;
     font-size: 3em;
     padding-top: 0;
     padding-bottom: 0;
-    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Playfair Display', serif;
   }
 
   .menu {
