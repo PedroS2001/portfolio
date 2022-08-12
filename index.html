@@ -73,10 +73,10 @@
             </div>
 
             <div class="row">
-                <div class="col">
+                <div class="col col-12 col-sm-6">
                     <img src="./assets/img/portfolio-1.jpg" width="100%" alt="Pedro Seneriz">
                 </div>
-                <div class="col">
+                <div class="col col-12 col-sm-6">
                     <p>
                         Soy un programador que vive en Carmen de Areco, Buenos Aires. <br>
                         Desde chico siempre estuve muy interesado en la tecnologia, aunque no fue hasta los 18 anos que
@@ -268,26 +268,29 @@
 
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="form-group mb-3">
+                    <form id="form" class="form-group mb-3">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingNombre" placeholder="Nombre">
+                            <input type="text" class="form-control" id="floatingNombre" name="name"
+                                placeholder="Nombre">
                             <label for="floatingNombre" class="form-text">Nombre y apellido</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingEmail" placeholder="Correo">
+                            <input type="email" class="form-control" id="floatingEmail" name="correo"
+                                placeholder="Correo">
                             <label for="floatingEmail" class="form-text">Correo electronico</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingAsunto" placeholder="Asunto">
+                            <input type="text" class="form-control" id="floatingAsunto" name="asunto"
+                                placeholder="Asunto">
                             <label for="floatingAsunto" class="form-text">Asunto</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" placeholder="mensaje" id="floatingTextarea"
+                            <textarea class="form-control" placeholder="mensaje" name="mensaje" id="floatingTextarea"
                                 style="height: 150px; resize: none;"></textarea>
                             <label for="floatingTextarea" class="form-text">Mensaje</label>
                         </div>
 
-                        <button>
+                        <button type="submit">
                             <div class="svg-wrapper">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.1em"
                                     height="1.1em">
@@ -300,7 +303,13 @@
                             <span>Enviar</span>
                         </button>
 
-                    </div>
+                    </form>
+                    <script type="text/javascript"
+                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                    <script type="text/javascript">
+                        emailjs.init('kE36luwF-ry7v0RrC')
+                    </script>
                     <!--Cierre formGroup-->
 
 
@@ -327,6 +336,28 @@
         </a>
     </footer>
 
+
+    <script>
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                console.log("Enviando mail...");
+
+                const serviceID = 'default_service';
+                const templateID = 'template_2qd9x85';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        console.log("Mail enviado");
+                        document.getElementById('form').reset();
+                    }, (err) => {
+                        document.getElementById('form').reset();
+                        console.log("Error: " + JSON.stringify(err));
+                    });
+            });
+    </script>
 </body>
 
 </html>

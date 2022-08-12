@@ -8,18 +8,25 @@ window.onscroll = function () {
 
     let elemento = document.querySelectorAll(".list li");
 
-    scrollY = window.scrollY;
+    let contacto = document.querySelector('#contacto').getBoundingClientRect().y;
+    let acerca = document.querySelector('#acerca').getBoundingClientRect().y;
+    let tecnologias = document.querySelector('#tecnologias').getBoundingClientRect().y;
+    let proyectos = document.querySelector('#proyectos').getBoundingClientRect().y;
+    console.log(contacto)
+    console.log(acerca)
+    console.log(tecnologias)
+    console.log(proyectos)
 
-    if (scrollY > 2362) {
+    if (contacto < 50 && contacto > -50) {
         setColor(elemento, 3);
     }
-    else if (scrollY > 1361) {
+    else if (proyectos < 50 && proyectos > -50) {
         setColor(elemento, 2);
     }
-    else if (scrollY > 982) {
+    else if (tecnologias < 50 && tecnologias > -50) {
         setColor(elemento, 1);
     }
-    else if (scrollY > 457) {
+    else if (acerca < 50 && acerca > -50) {
         setColor(elemento, 0);
     }
 };
